@@ -18,6 +18,27 @@ header {
     box-shadow: 0 2px 5px rgba(231, 205, 33, 0.974); /* Subtle shadow */
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the menu initially */
+        flex-direction: row; /* Stack vertically */
+        position: absolute; /* Position relative to nav */
+        background-color: #007bff; /* Match header background */
+        width: 100%; /* Full width */
+        top: 50px; /* Adjust top position */
+        left: 0px; /* Align to the left */
+        z-index: 1000; /* Ensure it appears above other elements */
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when toggled */
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon on small screens */
+    }
+}
+
 header h1 {
     margin: 0;
     font-size: 1.8em;
